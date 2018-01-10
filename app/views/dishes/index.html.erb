@@ -18,7 +18,7 @@
 
       <% @dishes.each do |dish| %>
       <tr>
-        <td><%= dish.venue_id %></td>
+        <td><%= dish.venue.location_id %></td>
         <td><%= dish.name %></td>
         <td><%= dish.new_venue %></td>
         <td><%= dish.cuisine_id %></td>
