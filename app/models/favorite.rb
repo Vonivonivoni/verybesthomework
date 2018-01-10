@@ -1,6 +1,10 @@
 class Favorite < ApplicationRecord
   # Direct associations
 
+  has_one    :user,
+             :foreign_key => "favorites_id",
+             :dependent => :nullify
+
   has_many   :venues,
              :foreign_key => "favorites_id",
              :dependent => :destroy

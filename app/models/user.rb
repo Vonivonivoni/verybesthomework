@@ -1,6 +1,10 @@
 class User < ApplicationRecord
   # Direct associations
 
+  belongs_to :favorites,
+             :required => false,
+             :class_name => "Favorite"
+
   # Indirect associations
 
   # Validations
