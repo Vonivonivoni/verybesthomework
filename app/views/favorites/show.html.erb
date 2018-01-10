@@ -6,13 +6,31 @@
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
       <dt>Dish</dt>
-      <dd><%= @favorite.dish_id %></dd>
+      <dd>
+        <% if @favorite.favorite_dish.present? %>
+          <a href="/dishes/<%= @favorite.dish_id %>">
+            <%= @favorite.favorite_dish.created_at %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Venue</dt>
-      <dd><%= @favorite.venue_id %></dd>
+      <dd>
+        <% if @favorite.favorite_venues.present? %>
+          <a href="/venues/<%= @favorite.venue_id %>">
+            <%= @favorite.favorite_venues.location_id %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Location</dt>
-      <dd><%= @favorite.location_id %></dd>
+      <dd>
+        <% if @favorite.location.present? %>
+          <a href="/locations/<%= @favorite.location_id %>">
+            <%= @favorite.location.address %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Username</dt>
       <dd><%= @favorite.username_id %></dd>

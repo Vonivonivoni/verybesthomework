@@ -12,7 +12,13 @@
       <dd><%= @user.password %></dd>
 
       <dt>Favorites</dt>
-      <dd><%= @user.favorites_id %></dd>
+      <dd>
+        <% if @user.favorites.present? %>
+          <a href="/favorites/<%= @user.favorites_id %>">
+            <%= @user.favorites.dish_id %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 
