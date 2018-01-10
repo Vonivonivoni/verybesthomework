@@ -20,7 +20,7 @@
       <tr>
         <td><%= favorite.favorite_dish.created_at %></td>
         <td><%= favorite.favorite_venues.location_id %></td>
-        <td><%= favorite.location_id %></td>
+        <td><%= favorite.location.address %></td>
         <td><%= favorite.username_id %></td>
         <td>
           <a href="/favorites/<%= favorite.id %>" class="btn btn-primary">Show</a>
