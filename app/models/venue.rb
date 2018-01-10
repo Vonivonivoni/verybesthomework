@@ -1,6 +1,8 @@
 class Venue < ApplicationRecord
   # Direct associations
 
+  belongs_to :location
+
   has_many   :favorites,
              :dependent => :destroy
 
