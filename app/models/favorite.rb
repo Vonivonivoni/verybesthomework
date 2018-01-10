@@ -1,6 +1,9 @@
 class Favorite < ApplicationRecord
   # Direct associations
 
+  belongs_to :location,
+             :required => false
+
   belongs_to :favorite_venues,
              :required => false,
              :class_name => "Venue",
